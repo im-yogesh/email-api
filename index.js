@@ -33,9 +33,9 @@ app.post('/email', urlencodedParser, (req, res) => {
 
     var mailOptions = {
         from: 'ysyogeshsingh24@gmail.com',
-        to: email,
+        to: 'ysyogeshsingh1@gmail.com',
         subject: subject,
-        text: `Name: ${name}<br/>Phone: ${phone}<br/>Message: ${message}`
+        html: `Name: ${name}<br/>Phone: ${phone}<br/>Email: ${email}<br/>Message: ${message}`
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
